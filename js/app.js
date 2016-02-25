@@ -1,4 +1,4 @@
-var app = angular.module('Portfolio', ['ui.router'])
+var app = angular.module('Portfolio', ['ui.router', 'ui.bootstrap'])
   .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', MainRouter])
   .run(['$rootScope', '$state', '$location', runFunction])
 
