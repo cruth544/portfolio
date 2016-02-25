@@ -1,10 +1,55 @@
+body {
+  font-size: 12px;
+}
 #banner {
   background-color: black;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 }
-.desc-left {
+div {
+  border: 1px solid blue;
+}span {
+  border: 1px solid red;
+}li {
+  border: 1px solid green;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+.all-projects-container{
+
+}.project-container {
+  width: 60%;
+  height: 200px;
+  position: relative;
+}.project-description-container {
+  height: 100%;
+  width: 30%;
+  display: inline;
+  position: relative;
+}
+.project-picture-container {
+  display: inline;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}.project-picture {
+  width: 20em;
+}
+.left {
+  float: left;
+  text-align: left;
   color: red;
-}.desc-right {
+}.right {
+  float: right;
+  text-align: right;
   color: blue;
+}
+
+@media (max-width: 1000px) {
+	body {
+		font-size: 36px;
+		padding: 5px;
+	}
 }

@@ -1,4 +1,17 @@
-<div class="project-container">
-  <div class="project-picture" ng-class-odd="'picture-left'" ng-class-even="'picture-right'">{{ project.name }}</div>
-  <div class="project-description" ng-class-odd="'desc-left'" ng-class-even="'desc-right'">{{ project.github }}</div>
+<div class="project-container" ng-class-odd="'left'" ng-class-even="'right'">
+  <div class="project-picture-container">
+    <img class="project-picture" ng-class-odd="'left'" ng-class-even="'right'" src="{{ project.picture }}" alt="">
+  </div>
+  <div class="project-description-container">
+    <div class="name"><a href="{{project.link}}">{{ project.name }}</a></div>
+    <div class="github"><a href="{{project.github}}">GitHub</a></div>
+    <div class="description">{{ project.description }}</div>
+    <div class="technology-container">
+      <ul class="technology-list">
+        <li class="technology" ng-repeat="technology in project.technologies">
+          {{ technology }}{{$last ? '' : ', '}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
