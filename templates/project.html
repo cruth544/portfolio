@@ -1,17 +1,28 @@
-<div class="project-container" ng-class-odd="'left'" ng-class-even="'right'">
-  <div class="project-picture-container">
-    <img class="project-picture" ng-class-odd="'left'" ng-class-even="'right'" src="{{ project.picture }}" alt="">
-  </div>
-  <div class="project-description-container">
-    <div class="name"><a href="{{project.link}}">{{ project.name }}</a></div>
-    <div class="github"><a href="{{project.github}}">GitHub</a></div>
-    <div class="description">{{ project.description }}</div>
-    <div class="technology-container">
-      <ul class="technology-list">
-        <li class="technology" ng-repeat="technology in project.technologies">
-          {{ technology }}{{$last ? '' : ', '}}
-        </li>
-      </ul>
+<div>
+  <div ng-if="$index % 2 === 1" class="col-sm-2"></div>
+  <div class="row" ng-class-odd="'left'" ng-class-even="'right'">
+    <div class="col-sm-7 vertical-center" ng-if="$index % 2 === 0">
+      <img class="col-sm-12 image-responsive" ng-class-odd="'left'" ng-class-even="'right'" ng-src="{{ project.picture }}" alt="">
+    </div>
+    <div class="col-sm-5">
+      <div class="col-sm-6">
+        <div class="name"><a href="{{project.link}}">{{ project.name }}</a></div>
+        <div class="github"><a href="{{project.github}}">GitHub</a></div>
+        <div class="description">{{ project.description }}</div>
+      </div>
+      <div class="col-sm-6">
+        <div class="technology-container">
+          <ul class="technology-list">
+            <li class="technology" ng-repeat="technology in project.technologies">
+              <img class="icons" ng-src="{{ badgeIcon[technology] }}" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7 vertical-center" ng-if="$index % 2 === 1">
+      <img class="col-sm-12 image-responsive" ng-class-odd="'left'" ng-class-even="'right'" ng-src="{{ project.picture }}" alt="">
     </div>
   </div>
+  <div class="col-sm-2" ng-if="$index % 2 === 0"></div>
 </div>

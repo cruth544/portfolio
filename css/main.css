@@ -1,6 +1,13 @@
 body {
   font-size: 12px;
 }
+.vertical-center {
+  min-height: 20vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
 #banner {
   background-color: black;
   width: 100vw;
@@ -13,6 +20,10 @@ div {
 }li {
   border: 1px solid green;
 }
+.icons {
+  width: 50px;
+  height: auto;
+}
 li {
   list-style: none;
   display: inline-block;
@@ -20,36 +31,28 @@ li {
 .all-projects-container{
 
 }.project-container {
-  width: 60%;
-  height: 200px;
-  position: relative;
+
 }.project-description-container {
-  height: 100%;
-  width: 30%;
-  display: inline;
-  position: relative;
+
 }
 .project-picture-container {
-  display: inline;
-  height: 100%;
-  width: 50%;
-  position: relative;
 }.project-picture {
-  width: 20em;
+  width: 200px;
+  height: 200px;
 }
 .left {
   float: left;
-  text-align: left;
-  color: red;
 }.right {
   float: right;
-  text-align: right;
-  color: blue;
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-device-width: 480px)  {
 	body {
 		font-size: 36px;
 		padding: 5px;
 	}
+  .project-container {
+    height: 30vh;
+    width: 100% !important;
+  }
 }

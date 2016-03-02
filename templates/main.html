@@ -1,3 +1,3 @@
 <div class="all-projects-container">
-  <ng-include src="'templates/project.html'" ng-repeat="project in projects"></ng-include>
+  <ng-include src="'templates/project.html'" ng-repeat="project in projects track by $index"></ng-include>
 </div>
