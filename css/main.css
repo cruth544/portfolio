@@ -1,8 +1,19 @@
 body {
-  font-size: 12px;
+  background-color: #bebebe;
+  font-size: 1.5em;
 }
+
+a {
+  color: #525252;
+}a:hover {
+  color: #777777 !important;
+}
+iframe {
+  border: none !important;
+}
+
 .vertical-center {
-  min-height: 20vh; /* These two lines are counted as one :-)       */
+  min-height: 20vh;
 
   display: flex;
   align-items: center;
@@ -13,20 +24,27 @@ body {
   width: 100vw;
   height: 95vh;
 }
-div {
+/*div {
   border: 1px solid blue;
 }span {
   border: 1px solid red;
 }li {
   border: 1px solid green;
-}
+}*/
 .icons {
   width: 50px;
   height: auto;
+  margin: 10px;
 }
 li {
   list-style: none;
   display: inline-block;
+}
+.row {
+  border: 4px solid gray;
+  margin: 6px 20px;
+  padding: 6px;
+  border-radius: 12px;
 }
 .all-projects-container{
 
@@ -36,6 +54,7 @@ li {
 
 }
 .project-picture-container {
+
 }.project-picture {
   width: 200px;
   height: 200px;
@@ -44,6 +63,16 @@ li {
   float: left;
 }.right {
   float: right;
+}
+.project-links {
+  margin: 10px 0;
+  text-align: center;
+}.name {
+}.github {
+  text-decoration: underline;
+}.description {
+  margin-top: 40px;
+  text-indent: 1.5em;
 }
 
 @media only screen and (max-device-width: 480px)  {
@@ -55,4 +84,12 @@ li {
     height: 30vh;
     width: 100% !important;
   }
+}
+
+.contact-info {
+  color: #525252;
+}#contact-email:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #777777;
 }

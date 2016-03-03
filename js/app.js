@@ -1,4 +1,5 @@
-var app = angular.module('Portfolio', ['ui.router', 'ui.bootstrap'])
+var app = angular.module('Portfolio',
+  ['ngSanitize', 'ui.router', 'ui.bootstrap'])
   .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', MainRouter])
   .run(['$rootScope', '$state', '$location', runFunction])
 
